@@ -11,4 +11,9 @@ public class KafkaProducerConfig {
     public NewTopic createTopic() {
         return new NewTopic("new-topic", 1, (short) 1);
     }
+
+    @Bean
+    public NewTopic NewUserCreatedTopic() {
+        return new NewTopic("joyjoy.users.account.created.1", 3, (short) 1);
+    }
 }
