@@ -35,7 +35,7 @@ public class KafkaMessagePublisher {
         });
     }
 
-    public void sendUserToTopic(User user){
+    public void sendUserToTopic(User user) {
         CompletableFuture<SendResult<String, Object>> send = template.send("joyjoy.users.account.created.1", user);
 
         send.whenComplete((result, exception) -> {
